@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    tools:context=".Registrazione">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Messaggio di errore -->
+
+        <!--<TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#800517"
+            android:text="ERRORE"
+            android:textSize="30sp"
+            android:visibility="gone" />-->
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/labelPw2"
+            android:layout_width="76dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/fontr"
+            android:gravity="center"
+            android:text="Conferma :"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPw" />
+
+        <TextView
+            android:id="@+id/labelCittà"
+            android:layout_width="76dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/fontr"
+            android:gravity="center"
+            android:text="Città :"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPw2" />
+
+        <TextView
+            android:id="@+id/labelPw"
+            android:layout_width="77dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/fontr"
+            android:gravity="center"
+            android:text="Password :"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelData" />
+
+        <TextView
+            android:id="@+id/labelData"
+            android:layout_width="91dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/fontr"
+            android:gravity="center"
+            android:text="Data nascita :"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelUsr" />
+
+        <TextView
+            android:id="@+id/labelUsr"
+            android:layout_width="76dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/fontr"
+            android:gravity="center"
+            android:text="Username :"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/sub_logo"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/fontr"
+            android:text="Registrazione"
+            android:textAlignment="center"
+            android:textColor="@color/Bianco"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/inputNome"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:baselineAligned="false"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="text"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toEndOf="@+id/labelUsr"
+            app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
+
+        <!-- Data -->
+        <EditText
+            android:id="@+id/inputData"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="date"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputNome" />
+
+        <!-- Città -->
+        <EditText
+            android:id="@+id/inputCittà"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:baselineAligned="false"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="text"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintStart_toEndOf="@+id/labelCittà"
+            app:layout_constraintTop_toBottomOf="@+id/inputPw2" />
+
+
+
+
+
+
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/inputPw"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="textPassword"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputData" />
+        <EditText
+            android:id="@+id/inputPw2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="textPassword"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintStart_toEndOf="@+id/labelPw2"
+            app:layout_constraintTop_toBottomOf="@+id/inputPw" />
+
+        <!-- Bottone -->
+        <Button
+            android:id="@+id/insButton"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/Bottone"
+            android:fontFamily="@font/fontr"
+            android:text="Registrati"
+            android:textColor="@color/Bianco"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputCittà" />
+
+        <!--Spaziatore-->
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
