@@ -5,6 +5,7 @@ import androidx.fragment.app.DialogFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,21 +16,22 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     EditText inputNome, inputPw;
     Button loginBtn;
     TextView regBtn;
     Utente user;
 
-    public static final String PERSON_EXTRA="package com.eventium.myapplication";
+    public static final String PERSON_EXTRA = "package com.eventium.myapplication";
+    public static Utente[] users = {new Utente("admin", "admin", "01/01/2000", "", 0), new Utente(1), new Utente(2), new Utente(3)}; //tutti gli users registrati
+    public static int logged; //variabile globale id dell'utente loggato
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         inputNome = findViewById(R.id.inputNome);
@@ -40,20 +42,23 @@ public class MainActivity extends AppCompatActivity{
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nomeC, passC, nome, pass;
-                nome = inputNome.getText().toString();
-                pass = inputPw.getText().toString();
-                ArrayList<Utente> users = (ArrayList<Utente>) getIntent().getSerializableExtra("serialzable");
-
-                for(int i = 0; i < users.size(); i++){
-                    nomeC = users.get(i).getNome();
-                    passC = users.get(i).getPw();
-                    if(nome.equals(nomeC) && pass.equals(passC)){
-                        Toast.makeText(MainActivity.this, "Utente loggato", Toast.LENGTH_SHORT).show();
+                boolean userFound = false;
+                for (int i = 0; i <= users.length - 1; i++) { //controllo le credenziali degli users salvati
+                    if ((inputNome.getText().toString().equals(users[i].getNome()) && inputPw.getText().toString().equals(users[i].getPw()))) { //se le trovo login
+                        userFound = true;
+                        Toast.makeText(getApplicationContext(),
+                                "Redirecting...", Toast.LENGTH_SHORT).show();
+                        logged = users[i].getId();
+                        //Intent hom = new Intent(MainActivity.this, Home.class);
+                        //startActivity(hom);
+                        Log.d("Prova", "" + i + users[i].getNome());
+                        //credenziali corrette indirizzare alla Home
                     }
-
                 }
-
+                if (userFound == false) { //altrimenti popup
+                    Toast.makeText(getApplicationContext(), "Credenziali sbagliate", Toast.LENGTH_SHORT).show();
+                    //credenziali sbagliate avvisi in rosso
+                }
             }
         });
 
@@ -66,9 +71,5 @@ public class MainActivity extends AppCompatActivity{
             }
         });
     }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        user = null;
-    }
 }
+

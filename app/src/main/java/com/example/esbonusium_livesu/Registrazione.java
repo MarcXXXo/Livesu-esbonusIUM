@@ -13,12 +13,13 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import static com.example.esbonusium_livesu.MainActivity.*;
 
 public class Registrazione extends AppCompatActivity implements View.OnClickListener {
-    public ArrayList<Utente> users = new ArrayList<Utente>();
     EditText inputNome, inputPw, inputCittà, inputPw2, data;
     Button btn;
     DatePickerFragment datePickerFragment;
+    Intent showResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,9 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
                 } else if (!pw2.equals(pw)) {
                     Toast.makeText(Registrazione.this, "Le password non coincidono", Toast.LENGTH_SHORT).show();
                 } else {
-                    sendUserData(username,pw, città, date);
+                    UpdateUtente();
+                    showResult = new Intent(Registrazione.this, MainActivity.class);
+                    startActivity(showResult);
                     Toast.makeText(Registrazione.this, "Utente Creato", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -99,27 +102,33 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
             }
         });
     }
-    public void sendUserData(String usern, String pass, String city, String date) {
-        users.add(pickInfo(usern,pass,city,date));
-        Intent toLog = new Intent(Registrazione.this,MainActivity.class);
-        Bundle b = new Bundle();
-        b.putSerializable("serialzable",users);
-        toLog.putExtras(b);
-        for (int i = 0; i < users.size(); i++) {
-            System.out.println(users.get(i));
+
+    private void UpdateUtente(){
+        int i = users.length - 1;
+        int j = 0;
+        int index = j;
+        //cerco un id libero
+        if(users[j].getNome() == "") {
+            index = j;
+        }else {
+            j++;
+            if (users[j].getNome() == "") {
+                index = j;
+            }else{
+                j++;
+                if (users[j].getNome() == "") {
+                    index = j;
+                }
+            }
         }
-        startActivity(toLog);
-    }
 
-    public static Utente pickInfo(String usern, String pass, String city, String date) {
-        Utente userinfo = new Utente();
-        userinfo.setNome(usern);
-        userinfo.setPw(pass);
-        userinfo.setBirthDate(date);
-        userinfo.setCittà(city);
-        return userinfo;
-    }
+        users[index].setCittà(this.inputCittà.getText().toString());
+        users[index].setNome(this.inputNome.getText().toString());
+        users[index].setPw(this.inputPw.getText().toString());
+        users[index].setBirthDate(this.data.getText().toString());
+        users[index].setId(index);
 
+    }
 
     @Override
     public void onClick(View view) {
