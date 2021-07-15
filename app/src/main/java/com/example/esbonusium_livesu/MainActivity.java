@@ -46,17 +46,20 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i <= users.length - 1; i++) { //controllo le credenziali degli users salvati
                     if ((inputNome.getText().toString().equals(users[i].getNome()) && inputPw.getText().toString().equals(users[i].getPw()))) { //se le trovo login
                         userFound = true;
-                        Toast.makeText(getApplicationContext(),
-                                "Redirecting...", Toast.LENGTH_SHORT).show();
                         logged = users[i].getId();
                         //Intent hom = new Intent(MainActivity.this, Home.class);
                         //startActivity(hom);
                         Log.d("Prova", "" + i + users[i].getNome());
                         //credenziali corrette indirizzare alla Home
+                        Intent j = new Intent(MainActivity.this, Home.class);
+                        startActivity(j);
                     }
                 }
                 if (userFound == false) { //altrimenti popup
-                    Toast.makeText(getApplicationContext(), "Credenziali sbagliate", Toast.LENGTH_SHORT).show();
+                    inputPw.setBackgroundResource(R.drawable.edit_text_error);
+                    inputNome.setBackgroundResource(R.drawable.edit_text_error);
+                    inputNome.setError("Credenziali Errate");
+
                     //credenziali sbagliate avvisi in rosso
                 }
             }
@@ -70,6 +73,25 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    private boolean checkI(){
+        int errors = 0;
+        if (inputNome.getText().toString().equals("")) {
+            inputNome.setError("Inserire username");
+            errors++;
+        }
+        if (inputPw.getText().toString().equals("")) {
+            inputPw.setError("Inserire password");
+            errors++;
+        }
+
+        if(errors == 0){
+            inputNome.setError(null);
+            inputPw.setError(null);
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 

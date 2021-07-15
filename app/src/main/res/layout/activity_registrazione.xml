@@ -135,6 +135,10 @@
 
 
         <!-- Username -->
+
+        <!-- Data -->
+
+        <!-- Città -->
         <EditText
             android:id="@+id/inputNome"
             android:layout_width="250dp"
@@ -147,11 +151,13 @@
             android:textColorHint="@color/Bianco"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintHorizontal_bias="0.446"
             app:layout_constraintStart_toEndOf="@+id/labelUsr"
             app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
 
-        <!-- Data -->
+
+        <!-- Password -->
+
         <EditText
             android:id="@+id/inputData"
             android:layout_width="250dp"
@@ -163,11 +169,10 @@
             android:textColorHint="@color/Bianco"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintHorizontal_bias="0.819"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputNome" />
 
-        <!-- Città -->
         <EditText
             android:id="@+id/inputCittà"
             android:layout_width="250dp"
@@ -180,33 +185,13 @@
             android:textColorHint="@color/Bianco"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintHorizontal_bias="0.446"
             app:layout_constraintStart_toEndOf="@+id/labelCittà"
             app:layout_constraintTop_toBottomOf="@+id/inputPw2" />
 
-
-
-
-
-
-
-        <!-- Password -->
+        <!-- Bottone -->
         <EditText
             android:id="@+id/inputPw"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/fontrobliquo"
-            android:inputType="textPassword"
-            android:textColor="@color/Bianco"
-            android:textColorHint="@color/Bianco"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputData" />
-        <EditText
-            android:id="@+id/inputPw2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -216,11 +201,25 @@
             android:textColorHint="@color/Bianco"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintHorizontal_bias="0.819"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputData" />
+
+        <EditText
+            android:id="@+id/inputPw2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/fontrobliquo"
+            android:inputType="textPassword"
+            android:textColor="@color/Bianco"
+            android:textColorHint="@color/Bianco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.446"
             app:layout_constraintStart_toEndOf="@+id/labelPw2"
             app:layout_constraintTop_toBottomOf="@+id/inputPw" />
 
-        <!-- Bottone -->
         <Button
             android:id="@+id/insButton"
             android:layout_width="180dp"

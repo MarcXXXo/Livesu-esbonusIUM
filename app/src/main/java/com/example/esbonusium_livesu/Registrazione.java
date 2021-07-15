@@ -5,6 +5,7 @@ import androidx.fragment.app.DialogFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
     Button btn;
     DatePickerFragment datePickerFragment;
     Intent showResult;
+    String username, pw, città, date, pw2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,38 +35,27 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
         inputCittà = findViewById(R.id.inputCittà);
         inputPw2 = findViewById(R.id.inputPw2);
 
+
+
+        username = inputNome.getText().toString();
+        pw = inputPw.getText().toString();
+        città = inputCittà.getText().toString();
+        date = data.getText().toString();
+        pw2 = inputPw2.getText().toString();
+
         btn = findViewById(R.id.insButton);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username, pw, città, date, pw2;
 
 
-                username = inputNome.getText().toString();
-                pw = inputPw.getText().toString();
-                città = inputCittà.getText().toString();
-                date = data.getText().toString();
-                pw2 = inputPw2.getText().toString();
-
-                if (username.equals("")) {
-                    Toast.makeText(Registrazione.this, "Username richiesto", Toast.LENGTH_SHORT).show();
-                } else if (pw.equals("")) {
-                    Toast.makeText(Registrazione.this, "Password richiesta", Toast.LENGTH_SHORT).show();
-                } else if (città.equals("")) {
-                    Toast.makeText(Registrazione.this, "Provenienza richiesta", Toast.LENGTH_SHORT).show();
-                } else if (pw2.equals("")) {
-                    Toast.makeText(Registrazione.this, "Conferma password richiesta", Toast.LENGTH_SHORT).show();
-                } else if (!pw2.equals(pw)) {
-                    Toast.makeText(Registrazione.this, "Le password non coincidono", Toast.LENGTH_SHORT).show();
-                } else {
+                if(checkInput()){
                     UpdateUtente();
                     showResult = new Intent(Registrazione.this, MainActivity.class);
                     startActivity(showResult);
-                    Toast.makeText(Registrazione.this, "Utente Creato", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
 
         data.setOnClickListener(new View.OnClickListener() {
@@ -132,6 +123,56 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+
+    }
+
+    private boolean checkInput(){
+        int errors = 0;
+        if (inputNome.getText() == null || inputNome.getText().length() == 0) {
+            inputNome.setError("Inserire username");
+            errors++;
+        }else{
+            inputNome.setError(null);
+        }
+
+        if (inputPw.getText() == null || inputPw.getText().length() == 0) {
+            inputPw.setError("Inserire password");
+            errors++;
+        }else{
+            inputPw.setError(null);
+        }
+
+        if (inputCittà.getText() == null || inputCittà.getText().length() == 0) {
+            inputCittà.setError("Inserire città");
+            errors++;
+        }else{
+            inputCittà.setError(null);
+        }
+
+        if (inputPw2.getText() == null || inputPw2.getText().length() == 0) {
+            inputPw2.setError("Inserire conferma password");
+            errors++;
+        }else{
+            inputPw2.setError(null);
+        }
+
+        if (!inputPw2.getText().toString().equals(inputPw.getText().toString())) {
+            inputPw2.setError("Le password non coincidono");
+            inputPw.setError("Le password non coincidono");
+            inputPw2.setBackgroundResource(R.drawable.edit_text_error);
+            inputPw.setBackgroundResource(R.drawable.edit_text_error);
+
+            errors++;
+        }
+
+        if(data.getText() == null || data.getText().length() == 0){
+            data.setError("Inserire data");
+            errors++;
+        }else{
+            data.setError(null);
+        }
+
+        return errors == 0;
 
     }
 }

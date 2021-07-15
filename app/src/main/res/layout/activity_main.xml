@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Registrati"
-            android:textColor="@color/ViolaChiaro"
+            android:textColor="@color/link"
             android:textSize="14sp" />
 
     </LinearLayout>
