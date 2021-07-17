@@ -9,14 +9,17 @@ import androidx.fragment.app.DialogFragment;
 public class Utente implements Serializable {
 
     private String nome, password, città, data;
+    private Boolean admin;
     private int id;
 
-    public Utente(String nome, String password, String data, String città, int id) {
+    public Utente(String nome, String password, String data, String città, int id, Boolean admin) {
         this.setNome(nome);
         this.setBirthDate(data);
         this.setPw(password);
         this.setCittà(città);
         this.setId(id);
+        this.setAdmin(admin);
+
     }
 
     public Utente() {
@@ -25,6 +28,7 @@ public class Utente implements Serializable {
         this.setPw("");
         this.setCittà("");
         this.setId(0);
+        this.setAdmin(false);
     }
     public Utente(int id) {
         this.setNome("");
@@ -32,6 +36,7 @@ public class Utente implements Serializable {
         this.setPw("");
         this.setCittà("");
         this.setId(id);
+        this.setAdmin(false);
     }
 
     public String getNome() {
@@ -66,5 +71,9 @@ public class Utente implements Serializable {
 
     public void setId(int id){ this.id = id;}
 
-    public int getId(){ return id;}
+    public int getId(){ return id; }
+
+    public Boolean getAdmin(){ return admin; }
+
+    public void setAdmin(Boolean admin){ this.admin = admin; }
 }

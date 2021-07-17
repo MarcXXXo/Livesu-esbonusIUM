@@ -18,7 +18,11 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        if(users[logged].getAdmin()){
+            setContentView(R.layout.admin_home);
+        }else {
+            setContentView(R.layout.activity_home);
+        }
 
         user = findViewById(R.id.userlog);
         pass = findViewById(R.id.pwlog);
