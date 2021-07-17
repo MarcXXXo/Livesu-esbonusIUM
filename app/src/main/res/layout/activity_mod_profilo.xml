@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    android:gravity="center"
+    tools:context=".Home">
+
+    <!-- Logo -->
+
+    <EditText
+        android:id="@+id/pwlog2"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+
+        android:textColor="@color/Bianco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toEndOf="@+id/labelPw3"
+        app:layout_constraintTop_toBottomOf="@+id/pwlog" />
+
+    <TextView
+        android:id="@+id/labelPw3"
+        android:layout_width="147dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="Conferma password :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPw" />
+
+    <TextView
+        android:id="@+id/userlog"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/labelUsr"
+        app:layout_constraintTop_toBottomOf="@+id/titolo" />
+
+    <TextView
+        android:id="@+id/birthlog"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/labelData"
+        app:layout_constraintTop_toBottomOf="@+id/citylog" />
+
+    <TextView
+        android:id="@+id/sub_logo"
+        android:layout_width="251dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontr"
+        android:text="Benvenuto"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--Label-->
+
+
+    <TextView
+        android:id="@+id/nomeLog"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/fontrobliquo"
+        android:text="nomeutente"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
+
+    <TextView
+        android:id="@+id/titolo"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="I tuoi dati :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeLog" />
+
+    <TextView
+        android:id="@+id/labelData"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="Data di nascita :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelCittà" />
+
+    <TextView
+        android:id="@+id/labelCittà"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="Città :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelUsr" />
+
+    <TextView
+        android:id="@+id/citylog"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+
+        android:textColor="@color/Bianco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/labelCittà"
+        app:layout_constraintTop_toBottomOf="@+id/userlog" />
+
+    <TextView
+        android:id="@+id/labelPw"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="Password :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelData" />
+
+    <EditText
+        android:id="@+id/pwlog"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toEndOf="@+id/labelPw"
+        app:layout_constraintTop_toBottomOf="@+id/birthlog" />
+
+    <TextView
+        android:id="@+id/labelUsr"
+        android:layout_width="111dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/fontr"
+        android:gravity="center"
+        android:text="Username :"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titolo" />
+
+
+    <!-- Bottone -->
+
+    <Button
+        android:id="@+id/confermaBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"
+        android:background="@color/Bottone"
+        android:fontFamily="@font/fontr"
+        android:text="Modifica la password"
+        android:textColor="@color/Bianco"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPw" />
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/Bottone"
+        android:fontFamily="@font/fontr"
+        android:text="Home"
+        android:textColor="@color/Bianco"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confermaBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

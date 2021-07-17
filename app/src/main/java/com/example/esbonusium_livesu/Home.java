@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
     TextView user, pass, data, città, nome, mod;
-    Button logout;
+    Button logout, gest;
 
 
     @Override
@@ -20,6 +20,14 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if(users[logged].getAdmin()){
             setContentView(R.layout.admin_home);
+            gest = findViewById(R.id.usersBtn);
+            gest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent m = new Intent(Home.this, MainActivity.class);
+                    startActivity(m);
+                }
+            });
         }else {
             setContentView(R.layout.activity_home);
         }
@@ -31,6 +39,7 @@ public class Home extends AppCompatActivity {
         nome = findViewById(R.id.nomeLog);
         logout = findViewById(R.id.logoutBtn);
         mod = findViewById(R.id.modProfilo);
+
 
 
         nome.setText(users[logged].getNome());
@@ -54,11 +63,10 @@ public class Home extends AppCompatActivity {
         mod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent p = new Intent(Home.this, ModProfilo.class);
+                startActivity(p);
             }
         });
-
-
 
 
 
