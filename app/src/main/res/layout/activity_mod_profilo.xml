@@ -12,18 +12,17 @@
 
     <EditText
         android:id="@+id/pwlog2"
-        android:layout_width="150dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/fontr"
-        android:gravity="center"
-        android:text=""
-        android:textAlignment="center"
-
+        android:layout_width="168dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/fontrobliquo"
+        android:inputType="textPassword"
         android:textColor="@color/Bianco"
-        android:textSize="20sp"
+        android:textColorHint="@color/Bianco"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toEndOf="@+id/labelPw3"
         app:layout_constraintTop_toBottomOf="@+id/pwlog" />
 
@@ -49,8 +48,6 @@
         android:layout_height="24dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/fontr"
-        android:gravity="center"
-        android:text=""
         android:textAlignment="center"
         android:textColor="@color/Bianco"
         android:textSize="20sp"
@@ -69,7 +66,7 @@
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/Bianco"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toEndOf="@+id/labelData"
@@ -81,10 +78,10 @@
         android:layout_height="31dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/fontr"
-        android:text="Benvenuto"
+        android:text="Modifica Profilo"
         android:textAlignment="center"
         android:textColor="@color/Bianco"
-
+        android:textStyle="bold"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,26 +92,10 @@
 
 
     <TextView
-        android:id="@+id/nomeLog"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/fontrobliquo"
-        android:text="nomeutente"
-        android:textAlignment="center"
-        android:textColor="@color/Bianco"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
-
-    <TextView
         android:id="@+id/titolo"
         android:layout_width="163dp"
         android:layout_height="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="67dp"
         android:fontFamily="@font/fontr"
         android:gravity="center"
         android:text="I tuoi dati :"
@@ -123,9 +104,9 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeLog" />
+        app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
 
     <TextView
         android:id="@+id/labelData"
@@ -182,7 +163,7 @@
         android:layout_width="111dp"
         android:layout_height="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/fontr"
         android:gravity="center"
         android:text="Password :"
@@ -195,18 +176,17 @@
 
     <EditText
         android:id="@+id/pwlog"
-        android:layout_width="150dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="@font/fontr"
-        android:gravity="center"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:baselineAligned="false"
+        android:fontFamily="@font/fontrobliquo"
+        android:inputType="textPassword"
         android:textColor="@color/Bianco"
-
-        android:textSize="20sp"
+        android:textColorHint="@color/Bianco"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toEndOf="@+id/labelPw"
         app:layout_constraintTop_toBottomOf="@+id/birthlog" />
 
@@ -252,11 +232,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@color/Bottone"
+        android:background="@color/link"
         android:fontFamily="@font/fontr"
         android:text="Home"
         android:textColor="@color/Bianco"
-        android:textSize="18dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confermaBtn" />

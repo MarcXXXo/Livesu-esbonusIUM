@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Utente user;
 
     public static final String PERSON_EXTRA = "package com.eventium.myapplication";
-    public static Utente[] users = {new Utente("admin", "admin", "01/01/2000", "", 0,true), new Utente(1), new Utente(2), new Utente(3)}; //tutti gli users registrati
+    public static Utente[] users = {new Utente("admin", "admin", "01/01/2000", "", 0,true), new Utente(1), new Utente(2), new Utente(3),new Utente(4), new Utente(5)}; //tutti gli users registrati
     public static int logged; //variabile globale id dell'utente loggato
 
 

@@ -99,7 +99,12 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
         int j = 0;
         int index = j;
         //cerco un id libero
-        if(users[j].getNome() == "") {
+        for(int x = 0; x < users.length; x++){
+            if(users[x].getNome().equals("")){
+                index = x;
+            }
+        }
+        /*if(users[j].getNome() == "") {
             index = j;
         }else {
             j++;
@@ -111,7 +116,7 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
                     index = j;
                 }
             }
-        }
+        }*/
 
         users[index].setCittà(this.inputCittà.getText().toString());
         users[index].setNome(this.inputNome.getText().toString());

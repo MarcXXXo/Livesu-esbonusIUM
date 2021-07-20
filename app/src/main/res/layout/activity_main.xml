@@ -9,17 +9,6 @@
     tools:context=".MainActivity">
 
 
-    <!-- Messaggio di errore
-
-    <TextView
-        android:id="@+id/errorText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#800517"
-        android:text="ERRORE"
-        android:textSize="30sp"
-        android:visibility="gone" />-->
-
     <!--Label-->
     <TextView
         android:id="@+id/labelPw"

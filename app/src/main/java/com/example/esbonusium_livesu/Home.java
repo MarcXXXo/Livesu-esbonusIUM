@@ -24,7 +24,7 @@ public class Home extends AppCompatActivity {
             gest.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent m = new Intent(Home.this, MainActivity.class);
+                    Intent m = new Intent(Home.this, AdminUsersView.class);
                     startActivity(m);
                 }
             });

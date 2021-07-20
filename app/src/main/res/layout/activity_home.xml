@@ -76,30 +76,33 @@
         app:layout_constraintStart_toEndOf="@+id/labelData"
         app:layout_constraintTop_toBottomOf="@+id/citylog" />
 
-    <TextView
-        android:id="@+id/sub_logo"
-        android:layout_width="251dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/fontr"
-        android:text="Benvenuto"
-        android:textAlignment="center"
-        android:textColor="@color/Bianco"
-
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <!--Label-->
 
 
     <TextView
+        android:id="@+id/sub_logo"
+        android:layout_width="178dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/fontr"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textColor="@color/Bianco"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/nomeLog"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="174dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/fontrobliquo"
         android:text="nomeutente"
         android:textAlignment="center"
@@ -107,26 +110,25 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toEndOf="@+id/titolo"
         app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
 
     <TextView
         android:id="@+id/titolo"
         android:layout_width="163dp"
         android:layout_height="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/fontr"
         android:gravity="center"
-        android:text="I tuoi dati :"
+        android:text="I dati di:"
         android:textAlignment="center"
         android:textColor="@color/Bianco"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeLog" />
+        app:layout_constraintTop_toBottomOf="@+id/sub_logo" />
 
     <TextView
         android:id="@+id/labelData"
