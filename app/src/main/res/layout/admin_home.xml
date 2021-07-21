@@ -79,10 +79,10 @@
     <TextView
         android:id="@+id/sub_logo"
         android:layout_width="251dp"
-        android:layout_height="31dp"
+        android:layout_height="41dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/fontr"
-        android:text="Benvenuto"
+        android:text="Benvenuto nella Home,"
         android:textAlignment="center"
         android:textColor="@color/Bianco"
 

@@ -52,6 +52,7 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
 
                 if(checkInput()){
                     UpdateUtente();
+                    Toast.makeText(Registrazione.this, "Registrazione Effettuata", Toast.LENGTH_SHORT).show();
                     showResult = new Intent(Registrazione.this, MainActivity.class);
                     startActivity(showResult);
                 }
@@ -104,26 +105,11 @@ public class Registrazione extends AppCompatActivity implements View.OnClickList
                 index = x;
             }
         }
-        /*if(users[j].getNome() == "") {
-            index = j;
-        }else {
-            j++;
-            if (users[j].getNome() == "") {
-                index = j;
-            }else{
-                j++;
-                if (users[j].getNome() == "") {
-                    index = j;
-                }
-            }
-        }*/
-
         users[index].setCittà(this.inputCittà.getText().toString());
         users[index].setNome(this.inputNome.getText().toString());
         users[index].setPw(this.inputPw.getText().toString());
         users[index].setBirthDate(this.data.getText().toString());
         users[index].setId(index);
-
     }
 
     @Override

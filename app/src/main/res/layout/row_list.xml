@@ -24,16 +24,16 @@
 
         <TextView
             android:id="@+id/nomeUtente"
-            android:layout_width="218dp"
+            android:layout_width="170dp"
             android:layout_height="match_parent"
             android:fontFamily="@font/fontr"
             android:gravity="center"
-            android:textStyle="bold"
             android:text="ciao"
+
             android:textAlignment="center"
             android:textColor="@color/Bianco"
-
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button"
@@ -41,11 +41,14 @@
             android:layout_height="wrap_content"
             android:background="@color/link"
             android:fontFamily="@font/fontr"
-            android:text="abilita"
             android:onClick="abilitaAdmin"
+            android:text="abilita"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="15dp"
             android:textColor="@color/Bianco"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
     </LinearLayout>
 
 
